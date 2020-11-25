@@ -45,9 +45,9 @@ resource "aws_ssm_parameter" "userpool_client_id" {
   value       = aws_cognito_user_pool_client.cosmos-pool-client.id
 }
 
-resource "aws_ssm_parameter" "cosmos-db" {
-  name        = "/cosmos/dynamodb/table/cosmos-db/id"
+resource "aws_ssm_parameter" "cicd-webapp-table-user" {
+  name        = "/cosmos/dynamodb/table/cicd-webapp-table-user/id"
   description = "cosmos dynamodb"
   type        = "String"
-  value       = aws_dynamodb_table.cosmos-db.id
+  value       = aws_dynamodb_table.cicd-webapp-table-user.id
 }
