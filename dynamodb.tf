@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "cicd-webapp-table-user" {
-  name         = "cicd-webapp-table-user-${stage}"
+  name         = "cicd-webapp-table-user-${var.stage}"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "Id"
 

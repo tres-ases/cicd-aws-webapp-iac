@@ -1,6 +1,6 @@
 #CLIENT
 resource "aws_cognito_user_pool" "cosmos-pool" {
-  name                     = "cosmos-pool-${stage}"
+  name                     = "cosmos-pool-${var.stage}"
   username_attributes      = ["email"]
   auto_verified_attributes = ["email"]
   password_policy {
@@ -28,7 +28,7 @@ resource "aws_cognito_user_pool" "cosmos-pool" {
 }
 
 resource "aws_cognito_user_pool_client" "cosmos-pool-client" {
-  name                = "cosmos-pool-client-${stage}"
+  name                = "cosmos-pool-client-${var.stage}"
   user_pool_id        = aws_cognito_user_pool.cosmos-pool.id
   generate_secret     = false
   explicit_auth_flows = ["ADMIN_NO_SRP_AUTH"]

@@ -44,25 +44,6 @@ resource "aws_ssm_parameter" "userpool_client_id" {
   type        = "String"
   value       = aws_cognito_user_pool_client.cosmos-pool-client.id
 }
-#APIGW ENDPOINT VPC
-resource "aws_ssm_parameter" "apigw-private-sg" {
-  name        = "/cosmos/vpc/security-group/apigw-private/id"
-  description = "apigw-private security-group"
-  type        = "String"
-  value       = aws_security_group.apigw-private.id
-}
-resource "aws_ssm_parameter" "apigw-endpoint" {
-  name        = "/cosmos/vpc/endpoint/apigw-private/id"
-  description = "apigw-private endpoint id"
-  type        = "String"
-  value       = aws_vpc_endpoint.apigw.id
-}
-resource "aws_ssm_parameter" "apigw-endpoint-arn" {
-  name        = "/cosmos/vpc/endpoint/apigw-private/arn"
-  description = "apigw-private endpoint arn"
-  type        = "String"
-  value       = aws_vpc_endpoint.apigw.arn
-}
 
 resource "aws_ssm_parameter" "cosmos-db" {
   name        = "/cosmos/dynamodb/table/cosmos-db/id"
