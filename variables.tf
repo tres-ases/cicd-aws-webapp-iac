@@ -1,7 +1,7 @@
 # Network
 variable "vpc_id"{
     type = string
-    default = "vpc-0359b647f99881647"
+    default = "vpc-dd5b8fa0"
 }
 variable "stage"{
     type = string
@@ -9,24 +9,24 @@ variable "stage"{
 }
 variable "subnets"{
     type = list(string)
-    default = ["subnet-0f8b1c9a6a3d269c3","subnet-0df9491a81624fef2","subnet-0c81773cbeecd455e"]
+    default = ["subnet-e70ab281","subnet-930f729d","subnet-dff77380"]
 }
 variable "region"{
     type = string
-    default = "us-west-2"
+    default = "us-east-1"
 }
 #COGNITO
 variable "CognitoUserPoolName"{
     type = string
-    default = "CognitoAuthApiUserPoolThor"
+    default = "CognitoAuthApiUserPoolCosmos"
 }
 variable "CognitoUserPoolClientName"{
     type = string
-    default = "CognitoAuthApiClientThor"
+    default = "CognitoAuthApiClientCosmos"
 }
 variable "CognitoUserPoolDomain"{
     type = string
-    default = "CognitoDomainThor"
+    default = "CognitoDomainCosmos"
 }
 variable "cognito_config"{
     type = object({
