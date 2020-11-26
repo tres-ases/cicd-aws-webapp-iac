@@ -53,6 +53,6 @@ resource "aws_ssm_parameter" "cicd-webapp-table-user" {
 }
 
 data "aws_ssm_parameter" "apigw-id" {
-  count = var.first_time ? 0 : 1
+  count = var.first_time ? 1 : 0
   name = "/cosmos/backend/aws-webapp-back-${var.stage}/apigateway/id"
 }
