@@ -75,7 +75,7 @@ jobs:
     - name: Terraform Format
       id: fmt
       run: |
-        export "TF_CLI_CONFIG_FILE=./.terraformrc
+        export "TF_CLI_CONFIG_FILE=./.terraformrc"
         terraform fmt -check
 
     # Checks that all Terraform configuration files adhere to a canonical format
