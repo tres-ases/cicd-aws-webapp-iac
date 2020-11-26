@@ -40,6 +40,6 @@ variable "cognito_config" {
 }
 
 variable "apigateway_id" {
-  type = string
+  type    = string
   default = "notconfigure"
 }

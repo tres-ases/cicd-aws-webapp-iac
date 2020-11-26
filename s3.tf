@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "cosmos-bucket-front" {
   acl    = "private"
 }
 resource "aws_s3_bucket_policy" "cosmos-bucket-policy" {
-    bucket = aws_s3_bucket.cosmos-bucket-front.id
-    policy = data.aws_iam_policy_document.cosmos_s3_policy.json
+  bucket = aws_s3_bucket.cosmos-bucket-front.id
+  policy = data.aws_iam_policy_document.cosmos_s3_policy.json
 }
 

@@ -33,20 +33,20 @@ resource "aws_ssm_parameter" "userpool_arn" {
   value       = aws_cognito_user_pool.cosmos-pool.arn
 }
 resource "aws_ssm_parameter" "userpool_endpoint" {
-  name        = "/cosmos/cognito/client/userpool/endpoint"
+  name        = "/cosmos/${var.stage}/cognito/client/userpool/endpoint"
   description = "cosmos cognito userpool endpoint"
   type        = "String"
   value       = aws_cognito_user_pool.cosmos-pool.endpoint
 }
 resource "aws_ssm_parameter" "userpool_client_id" {
-  name        = "/cosmos/cognito/client/userpool/client_id"
+  name        = "/cosmos/${var.stage}/cognito/client/userpool/client_id"
   description = "cosmos cognito userpool client ID"
   type        = "String"
   value       = aws_cognito_user_pool_client.cosmos-pool-client.id
 }
 
 resource "aws_ssm_parameter" "cicd-webapp-table-user" {
-  name        = "/cosmos/dynamodb/table/cicd-webapp-table-user/id"
+  name        = "/cosmos/${var.stage}/dynamodb/table/cicd-webapp-table-user/id"
   description = "cosmos dynamodb"
   type        = "String"
   value       = aws_dynamodb_table.cicd-webapp-table-user.id
