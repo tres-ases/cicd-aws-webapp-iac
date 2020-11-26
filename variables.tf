@@ -43,3 +43,8 @@ variable "apigateway_id" {
   type    = string
   default = "notconfigure"
 }
+variable "first_time" {
+  description = "If set to true dummy apigw"
+  type        = bool
+  default = false
+}
