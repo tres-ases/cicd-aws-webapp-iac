@@ -76,7 +76,7 @@ resource "aws_cloudfront_distribution" "cosmos_distribution" {
   price_class = "PriceClass_All"
   viewer_certificate {
     cloudfront_default_certificate = true
-    ssl_supxport_method = "sni-only"
+    ssl_support_method = "sni-only"
   }
 }
 

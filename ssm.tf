@@ -53,5 +53,5 @@ resource "aws_ssm_parameter" "cicd-webapp-table-user" {
 }
 
 data "aws_ssm_parameter" "apigw-id" {
-  name = "/cosmos/backend/aws-webapp-back-${stage}/apigateway/id"
+  name = "/cosmos/backend/aws-webapp-back-${var.stage}/apigateway/id"
 }
