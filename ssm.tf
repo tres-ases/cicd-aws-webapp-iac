@@ -51,3 +51,7 @@ resource "aws_ssm_parameter" "cicd-webapp-table-user" {
   type        = "String"
   value       = aws_dynamodb_table.cicd-webapp-table-user.id
 }
+
+data "aws_ssm_parameter" "apigw-id" {
+  name = "/cosmos/backend/aws-webapp-back-${stage}/apigateway/id"
+}
