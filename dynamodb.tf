@@ -14,7 +14,7 @@ resource "aws_dynamodb_table" "cicd-webapp-table-user" {
   }
   global_secondary_index {
     name            = "ActiveIndex"
-    hash_key        = "Id"
+    hash_key        = "Active"
     write_capacity  = 0
     read_capacity   = 0
     projection_type = "ALL"
