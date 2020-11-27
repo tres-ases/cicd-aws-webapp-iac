@@ -76,6 +76,7 @@ jobs:
       run: |
         export "TF_CLI_CONFIG_FILE=./.terraformrc"
         export "TF_WORKSPACE=${GITHUB_REF##*/}"
+        echo "WORKSPACE: $TF_WORKSPACE"
         terraform init
         
 
