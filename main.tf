@@ -3,7 +3,7 @@ terraform {
     organization = "cosmos-demo"
 
     workspaces {
-      name = "cosmos-demo-${var.stage}"
+      prefix = "cosmos-demo-"
     }
   }
 }
