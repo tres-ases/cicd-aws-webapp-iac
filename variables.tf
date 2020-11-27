@@ -38,10 +38,6 @@ variable "cognito_config" {
     pw_temporary_password_validity_days = 30
   }
 }
-variable "apigateway_id" {
-  type    = string
-  default = var.first_time ? "noconfigure" : data.apigateway_id.value
-}
 variable "first_time" {
   description = "If set to true dummy apigw"
   type        = bool

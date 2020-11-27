@@ -11,7 +11,7 @@ resource "aws_cloudfront_distribution" "cosmos_distribution" {
     }
   }
   origin {
-    domain_name = "${var.apigateway_id}.execute-api.us-west-2.amazonaws.com"
+    domain_name = "${var.first_time ? "noconfigure" : data.apigateway_id.value}.execute-api.us-west-2.amazonaws.com"
     origin_id   = "cosmos-apigw"
     custom_origin_config {
       http_port              = 80
