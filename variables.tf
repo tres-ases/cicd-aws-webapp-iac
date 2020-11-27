@@ -38,8 +38,8 @@ variable "cognito_config" {
     pw_temporary_password_validity_days = 30
   }
 }
-variable "first_time" {
+variable "not_first_time" {
   description = "If set to true dummy apigw"
   type        = bool
-  default = false
+  default = true
 }
