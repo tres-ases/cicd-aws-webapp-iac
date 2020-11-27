@@ -9,7 +9,7 @@ variable "stage" {
 }
 variable "subnets" {
   type    = list(string)
-  default = ["subnet-e70ab281", "subnet-930f729d", "subnet-dff77380"]
+  default = ["subnet-e70ab281", "subnet-930f729d", "subnet-dff77380", "subnet-dff77381"]
 }
 variable "region" {
   type    = string
