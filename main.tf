@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    organization = "cosmos-demo"
+    organization = "cosmos-demo-${var.stage}"
 
     workspaces {
-      name = "cosmos-demo"
+      name = "cosmos-demo-${var.stage}"
     }
   }
 }
