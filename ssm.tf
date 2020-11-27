@@ -7,9 +7,9 @@ resource "aws_ssm_parameter" "cosmos-cf-templates" {
 }
 resource "aws_ssm_parameter" "cosmos_bucket_front_id" {
   name        = "/cosmos/${var.stage}/s3/cosmos-front/id"
-  description = "Thor frontend bucket S3"
+  description = "cosmos frontend bucket S3"
   type        = "String"
-  value       = aws_s3_bucket.thor-bucket-front.id
+  value       = aws_s3_bucket.cosmos-bucket-front.id
 }
 #VPC
 resource "aws_ssm_parameter" "cosmos-vpc-id" {
