@@ -75,8 +75,9 @@ jobs:
       id: init
       run: |
         export "TF_CLI_CONFIG_FILE=./.terraformrc"
-        terraform init -input=false
-        terraform workspace select ${GITHUB_REF##*/}
+        export "TF_WORKSPACE=${GITHUB_REF##*/}"
+        terraform init
+        
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Validate
